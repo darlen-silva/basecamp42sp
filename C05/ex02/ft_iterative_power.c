@@ -17,10 +17,10 @@ int	ft_iterative_power(int nb, int power)
 
 	pow = nb;
 	count = 0;
-	if (nb == 0 || nb == 1)
-		return (nb);
 	if (power == 0)
 		return (1);
+	if (nb == 0 || nb == 1)
+		return (nb);
 	if (power < 0)
 		return (0);
 	while (++count < power)
