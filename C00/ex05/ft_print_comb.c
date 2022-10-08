@@ -35,14 +35,9 @@ void	ft_print_comb(void)
 			while (++num3 <= 9)
 			{
 				ft_putchar(num1 + '0', num2 + '0', num3 + '0');
-				if (num1 != 7 || num2 != 8 || num3 != 9)
+				if (num1 != 7)
 					write(1, ", ", 2);
 			}
 		}
 	}
-}
-
-int main(void)
-{
-	ft_print_comb();
 }

@@ -12,16 +12,19 @@
 
 int	ft_is_prime(int nb)
 {
-	int	count;
+	int	i;
 
-	count = 2;
+	i = 2;
 	if (nb < 2)
 		return (0);
-	while (count * count <= nb)
+	while (i * i <= nb + 10)
 	{
-		if (nb % count == 0)
+		// if (i > 5)
+		// 	while (i % 2 == 0 || i % 3 == 0 || i % 5 == 0)
+		// 			i++;
+		if (nb % i == 0 && i * i <= nb)
 			return (0);
-		count++;
+		i++;
 	}
 	return (1);
 }

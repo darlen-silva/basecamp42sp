@@ -10,21 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strlen(char *dest, char *src)
+int	ft_strlen(char *str)
 {
-	//int	count;
-	while ((*dest = *src) != '\0') 
-	{
-		dest++;
-		src++;
-	}
-}
+	int	count;
 
-#include <stdio.h>
-int main(void)
-{
-	char a[] = "hello";
-	char b[] = "fdfdfdfd";
-	//printf("%s\n", ft_strlen(b, a));
-	ft_strlen(b, a);
+	count = 0;
+	while (*str++)
+		count++;
+	return (count);
 }

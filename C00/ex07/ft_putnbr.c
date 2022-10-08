@@ -39,26 +39,5 @@ void	ft_putnbr(int nb)
 		count++;
 	}
 	while (--count >= 0)
-	{
 		print(arr[count]);
-	}
-}
-void	ft_putnbr2(int nb)
-{
-	if (nb < 0)
-	{
-		print('-');
-		nb = -nb;
-	}
-	if (nb / 10)
-		ft_putnbr2(nb / 10);
-	print(nb % 10 + '0');
-}
-
-int main(void)
-{
-	ft_putnbr(-2147483649);
-	print('\n');
-	ft_putnbr2(-2147483649);
-	print('\n');
 }
