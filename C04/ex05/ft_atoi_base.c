@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 static int	check_base(char *base)
 {
@@ -36,7 +35,7 @@ static int	check_base(char *base)
 	return (i);
 }
 
-int	check_str(char str, char *base)
+int	find_index(char str, char *base)
 {
 	int	count;
 	int	i;
@@ -79,11 +78,11 @@ int	convert_base(char *str, char *base, int b)
 	i = 0;
 	ans = 0;
 	j = 0;
-	while (!(check_str(str[i], base) < 0))
+	while (!(find_index(str[i], base) < 0))
 		i++;
-	while (!(check_str(str[--i], base) < 0))
+	while (!(find_index(str[--i], base) < 0))
 	{
-		val = check_str(str[i], base);
+		val = find_index(str[i], base);
 		ans = ans + (val * ft_power(b, j));
 		j++;
 	}
