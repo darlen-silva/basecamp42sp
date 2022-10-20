@@ -14,6 +14,8 @@ int	ft_recursive_power(int nb, int power)
 {
 	if (power == 0)
 		return (1);
+	if (nb == 0 || nb == 1)
+		return (nb);
 	else if (power < 0)
 		return (0);
 	else
